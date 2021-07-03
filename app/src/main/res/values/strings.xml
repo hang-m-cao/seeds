@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">TSHLIB</string>
     <string name="dashboard">Dashboard</string>
-    <string name="learn">Learn More</string>
+    <string name="learn">Learn</string>
     <string name="profile">Profile</string>
     <string name="your_profile">Your Profile</string>
     <string name="your_stats">Your Stats</string>
