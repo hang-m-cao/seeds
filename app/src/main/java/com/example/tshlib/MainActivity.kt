@@ -3,7 +3,9 @@ package com.example.tshlib
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import kotlinx.android.synthetic.main.fragment_dashboard.*
 
 class MainActivity : AppCompatActivity() {
 
