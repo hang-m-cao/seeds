@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         val learnFragment : Fragment = LearnFragment()
         val profileFragment : Fragment = ProfileFragment()
 
+
         setCurrentFragment(dashboardFragment)
 
         bottomNav.setOnNavigationItemSelectedListener {
@@ -23,6 +24,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_dashboard->setCurrentFragment(dashboardFragment)
                 R.id.nav_learn->setCurrentFragment(learnFragment)
                 R.id.nav_profile->setCurrentFragment(profileFragment)
+
             }
             true
         }

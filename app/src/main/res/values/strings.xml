@@ -10,6 +10,11 @@
     <string name="your_stats3">Your Stats</string>
     <string name="you_are_currently_a_njust_more_points_till_you_reach">You are currently a ... \nJust __ more points till you reach...</string>
     <string name="my_articles">My Articles</string>
+    <string name="quiz">Quiz</string>
+    <string name="quiztopic1">Food</string>
+    <string name="quiztopic2">Transportation</string>
+    <string name="quiztopic3">Energy</string>
+    <string name="quiztopic4">Water</string>
 
 
 </resources>
