@@ -2,5 +2,5 @@ package com.example.tshlib
 
 data class Article (
         val title: String?,
-        val summary: String?
+        val saved: Boolean = false
 )

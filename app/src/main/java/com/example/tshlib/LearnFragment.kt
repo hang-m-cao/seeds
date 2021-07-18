@@ -3,32 +3,28 @@ package com.example.tshlib
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.fragment_learn.*
 
 class LearnFragment: Fragment(R.layout.fragment_learn) {
 
-    private lateinit var learnAdapter: LearnAdapter
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val sectionTitles: MutableList<String> = mutableListOf("Featured", "Waste", "Food", "Energy", "Pollution")
+        val sectionTitles: List<Int> = listOf(R.string.section1, R.string.section2, R.string.section3, R.string.section4)
+
         val dummyArticles: MutableList<Article> = mutableListOf()
 
-        for(i in 1..3) {
-            dummyArticles.add(Article("article $i", null))
+        for(i in 1..5) {
+            dummyArticles.add(Article("$i Step(s) to Sustainable Eating"))
         }
 
-        val sections: MutableList<LearnSection> = mutableListOf()
+        val sectionAdapter = PagerAdapter(requireContext(), sectionTitles, dummyArticles)
+        viewPagerSections.adapter = sectionAdapter
 
-        for(i in 0 until sectionTitles.size) {
-            sections.add(LearnSection(sectionTitles[i], dummyArticles))
-        }
-
-        learnAdapter = LearnAdapter(sections)
-        rv_learn_sections.adapter = learnAdapter
-        rv_learn_sections.layoutManager = LinearLayoutManager(context)
+        TabLayoutMediator(section_tabs, viewPagerSections) { tab, position ->
+            tab.setText(sectionTitles[position])
+        }.attach()
 
     }
 }
