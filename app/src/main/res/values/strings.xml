@@ -3,6 +3,13 @@
     <string name="dashboard">Dashboard</string>
     <string name="learn">Learn More</string>
     <string name="profile">Profile</string>
+    <string name="actus">actus</string>
+    <string name="been_making_progress_on_your_carbon_footprint_reduction_journey">Been making progress on your carbon footprint reduction journey?</string>
+    <string name="take_our_quiz"><![CDATA[Take Our Quiz >]]></string>
+    <string name="empowering_gen_z_to_track_manage_and_reduce_their_fossil_fuel_intake">Empowering Gen-Z to <b>track</b>, <b>manage</b>, and <b>reduce</b> their fossil fuel intake</string>
+    <string name="todo">TODO</string>
+    <string name="carbon_image">carbon image</string>
+    <string name="cactus">cactus</string>
 
 
 </resources>
