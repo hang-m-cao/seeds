@@ -22,7 +22,7 @@ class LearnFragment: Fragment(R.layout.fragment_learn) {
         val sectionAdapter = PagerAdapter(sectionTitles, dummyArticles)
         viewPagerSections.adapter = sectionAdapter
 
-        TabLayoutMediator(section_tabs, viewPagerSections) { tab, position ->
+        TabLayoutMediator(sectionTabs, viewPagerSections) { tab, position ->
             tab.setText(sectionTitles[position])
         }.attach()
 

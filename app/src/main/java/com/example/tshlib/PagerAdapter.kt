@@ -2,14 +2,9 @@ package com.example.tshlib
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.ImageButton
-import android.widget.TextView
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.fragment_learn_sections.view.*
 
 class PagerAdapter
@@ -31,8 +26,8 @@ class PagerAdapter
         val articlesAdapter = ArticlesAdapter(articles[position])
 
         holder.itemView.apply {
-            rv_articles.adapter = articlesAdapter
-            rv_articles.layoutManager = GridLayoutManager(context, 2)
+            articlesRecyclerView.adapter = articlesAdapter
+            articlesRecyclerView.layoutManager = GridLayoutManager(context, 2)
 
             quickTipsToggleShow.setOnClickListener {
                 quickTipsToggleHide.visibility = View.VISIBLE
