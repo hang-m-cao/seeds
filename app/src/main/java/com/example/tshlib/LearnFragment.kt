@@ -15,7 +15,7 @@ class LearnFragment: Fragment(R.layout.fragment_learn) {
 
         val dummyArticles: MutableList<Article> = mutableListOf()
 
-        for(i in 1..5) {
+        for(i in 1..7) {
             dummyArticles.add(Article("$i Step(s) to Sustainable Eating"))
         }
 

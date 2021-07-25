@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.fragment_learn_sections.view.*
 
 class PagerAdapter
@@ -17,7 +18,6 @@ class PagerAdapter
     RecyclerView.Adapter<PagerAdapter.PageHolder>(){
 
     inner class PageHolder(view: View): RecyclerView.ViewHolder(view){
-        val sectionTitle: TextView = view.tv_sectionTitle
         val articlesRecyclerView: RecyclerView = view.rv_articles
     }
 
@@ -29,9 +29,9 @@ class PagerAdapter
     }
 
     override fun onBindViewHolder(holder: PageHolder, position: Int) {
-        holder.sectionTitle.setText(sectionTitles[position])
         val articlesAdapter = ArticlesAdapter(articles)
         holder.articlesRecyclerView.adapter = articlesAdapter
+//        holder.articlesRecyclerView.layoutManager = LinearLayoutManager(context)
         holder.articlesRecyclerView.layoutManager = GridLayoutManager(context, 2)
     }
 
