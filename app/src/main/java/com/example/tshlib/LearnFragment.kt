@@ -13,18 +13,28 @@ class LearnFragment: Fragment(R.layout.fragment_learn) {
 
         val sectionTitles: List<Int> = listOf(R.string.section1, R.string.section2, R.string.section3, R.string.section4)
 
-        val dummyArticles: MutableList<Article> = mutableListOf()
+        val dummyArticles: MutableList<MutableList<Article>> = mutableListOf()
 
-        for(i in 1..7) {
-            dummyArticles.add(Article("$i Step(s) to Sustainable Eating"))
+        for(stringId in sectionTitles) {
+            dummyArticles.add(generateDummyArticles(getString(stringId)))
         }
 
-        val sectionAdapter = PagerAdapter(requireContext(), sectionTitles, dummyArticles)
+        val sectionAdapter = PagerAdapter(sectionTitles, dummyArticles)
         viewPagerSections.adapter = sectionAdapter
 
         TabLayoutMediator(section_tabs, viewPagerSections) { tab, position ->
             tab.setText(sectionTitles[position])
         }.attach()
 
+    }
+
+    private fun generateDummyArticles(sectionTitle: String): MutableList<Article> {
+        val result = mutableListOf<Article>()
+
+        for (i in 1..sectionTitle.length) {
+            result.add(Article("Article $i in $sectionTitle"))
+        }
+
+        return result
     }
 }
