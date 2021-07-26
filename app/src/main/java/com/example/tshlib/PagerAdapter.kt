@@ -5,11 +5,11 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.fragment_learn_sections.view.*
 
 class PagerAdapter
-    (private val sectionTitles: List<Int>,
-     private val articles: MutableList<MutableList<Article>>):
+    (private val articles: MutableList<MutableList<Article>>):
     RecyclerView.Adapter<PagerAdapter.PageHolder>(){
 
     inner class PageHolder(view: View): RecyclerView.ViewHolder(view)
@@ -27,17 +27,8 @@ class PagerAdapter
 
         holder.itemView.apply {
             articlesRecyclerView.adapter = articlesAdapter
-            articlesRecyclerView.layoutManager = GridLayoutManager(context, 2)
+            articlesRecyclerView.layoutManager = LinearLayoutManager(context)
 
-            quickTipsToggleShow.setOnClickListener {
-                quickTipsToggleHide.visibility = View.VISIBLE
-                quickTipsCard.visibility = View.GONE
-            }
-
-            quickTipsToggleHide.setOnClickListener{
-                quickTipsToggleHide.visibility = View.INVISIBLE
-                quickTipsCard.visibility = View.VISIBLE
-            }
         }
 
     }

@@ -19,7 +19,7 @@ class LearnFragment: Fragment(R.layout.fragment_learn) {
             dummyArticles.add(generateDummyArticles(getString(stringId)))
         }
 
-        val sectionAdapter = PagerAdapter(sectionTitles, dummyArticles)
+        val sectionAdapter = PagerAdapter(dummyArticles)
         viewPagerSections.adapter = sectionAdapter
 
         TabLayoutMediator(sectionTabs, viewPagerSections) { tab, position ->
@@ -32,7 +32,7 @@ class LearnFragment: Fragment(R.layout.fragment_learn) {
         val result = mutableListOf<Article>()
 
         for (i in 1..sectionTitle.length) {
-            result.add(Article("Article $i in $sectionTitle"))
+            result.add(Article(0,"Article $i in $sectionTitle", null, null))
         }
 
         return result
