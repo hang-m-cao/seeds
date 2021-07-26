@@ -2,7 +2,7 @@
     <string name="app_name">TSHLIB</string>
     <string name="dashboard">Dashboard</string>
     <string name="learn">Learn</string>
-    <string name="profile">Profile</string>
+    <string name="profile">Your Profile</string>
 
     <string name="featured">Featured</string>
     <string name="saved">Saved</string>
