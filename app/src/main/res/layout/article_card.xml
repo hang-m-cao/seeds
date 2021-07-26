@@ -8,7 +8,7 @@
     android:background="@drawable/rounded_article_card_bg">
 
     <ImageView
-        android:id="@+id/iv_article_pic"
+        android:id="@+id/articlePic"
         android:layout_width="200dp"
         android:layout_height="0dp"
         android:layout_marginVertical="5dp"
@@ -19,7 +19,7 @@
         android:layout_marginHorizontal="10dp"/>
 
     <TextView
-        android:id="@+id/tv_article_title"
+        android:id="@+id/articleTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="5dp"
@@ -27,15 +27,15 @@
         android:maxLines="5"
         android:textAlignment="center"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/heart_icon_unliked"
+        app:layout_constraintBottom_toTopOf="@+id/heartUnliked"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/iv_article_pic"
+        app:layout_constraintStart_toEndOf="@+id/articlePic"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Title " />
 
     <ImageView
-        android:id="@+id/heart_icon_unliked"
+        android:id="@+id/heartUnliked"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -44,7 +44,7 @@
         app:srcCompat="@drawable/ic_heart_unliked" />
 
     <ImageView
-        android:id="@+id/heart_icon_liked"
+        android:id="@+id/heartLiked"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"

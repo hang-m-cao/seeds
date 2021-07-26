@@ -22,24 +22,24 @@ class ArticlesAdapter (private val articles : MutableList<Article>):
         val currArticle = articles[position]
 
         holder.itemView.apply {
-            tv_article_title.text = currArticle.title
+            articleTitle.text = currArticle.title
 
             if (currArticle.saved) {
-                heart_icon_liked.visibility = View.VISIBLE
-                heart_icon_unliked.visibility = View.INVISIBLE
+                heartLiked.visibility = View.VISIBLE
+                heartUnliked.visibility = View.INVISIBLE
             } else {
-                heart_icon_liked.visibility = View.INVISIBLE
-                heart_icon_unliked.visibility = View.VISIBLE
+                heartLiked.visibility = View.INVISIBLE
+                heartUnliked.visibility = View.VISIBLE
             }
 
-            heart_icon_liked.setOnClickListener{
-                heart_icon_liked.visibility = View.INVISIBLE
-                heart_icon_unliked.visibility = View.VISIBLE
+            heartLiked.setOnClickListener{
+                heartLiked.visibility = View.INVISIBLE
+                heartUnliked.visibility = View.VISIBLE
             }
 
-            heart_icon_unliked.setOnClickListener{
-                heart_icon_liked.visibility = View.VISIBLE
-                heart_icon_unliked.visibility = View.INVISIBLE
+            heartUnliked.setOnClickListener{
+                heartLiked.visibility = View.VISIBLE
+                heartUnliked.visibility = View.INVISIBLE
             }
 
         }
