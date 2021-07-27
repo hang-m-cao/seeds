@@ -32,7 +32,7 @@ class LearnFragment: Fragment(R.layout.fragment_learn) {
         val result = mutableListOf<Article>()
 
         for (i in 1..sectionTitle.length) {
-            result.add(Article(0,"Article $i in $sectionTitle", null, null))
+            result.add(Article(0,"Article $i in $sectionTitle", "", "", ""))
         }
 
         return result

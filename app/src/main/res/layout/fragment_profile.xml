@@ -32,16 +32,18 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profilePageTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/profilePageTitle"
+        android:fontFamily="@font/lato"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/myArticlesRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
+        android:paddingHorizontal="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/myArticlesHeader"
-        android:paddingHorizontal="10dp"/>
+        app:layout_constraintTop_toBottomOf="@+id/myArticlesHeader" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
