@@ -8,52 +8,60 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="match_parent" >
 
         <TextView
-            android:id="@+id/quickTipsText"
+            android:id="@+id/quickTipsTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/quick_tips"
-            android:textSize="24sp"
-            tools:layout_editor_absoluteX="50dp"
-            tools:layout_editor_absoluteY="30dp"
             android:layout_marginHorizontal="40dp"
             android:layout_marginVertical="10dp"
+            android:paddingHorizontal="10dp"
+            android:text="@string/quick_tips"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:paddingHorizontal="10dp"/>
+            android:textColor="@color/black"/>
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/quickTipsCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/quickTipsText"
-            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/quickTipsTitle"
             android:padding="10dp"
             android:layout_marginHorizontal="40dp"
             android:background="@drawable/ic_decorative_blob">
 
             <TextView
+                android:id="@+id/quickTipsText"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:text="\u2022 Here will be some quick tips on each topic\n\u2022 This is how it will look"
-                android:textSize="16sp"
+                android:layout_height="150dp"
+                android:background="@drawable/ic_text_bubble"
                 android:padding="10dp"
-                android:background="@drawable/ic_text_bubble"/>
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="hello" />
 
             <ImageView
                 android:id="@+id/cactusLogo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginHorizontal="40dp"
+                app:layout_constraintTop_toBottomOf="@+id/quickTipsText"
                 app:srcCompat="@drawable/cactus_logo" />
 
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
-            android:id="@+id/filterHeader"
+            android:id="@+id/articlesHeader"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -70,14 +78,14 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/articlesRecyclerView"
             android:layout_width="match_parent"
-            android:layout_height="400dp"
+            android:layout_height="560dp"
             android:layout_marginVertical="10dp"
             android:layout_marginHorizontal="30dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/filterHeader" />
+            app:layout_constraintTop_toBottomOf="@+id/articlesHeader" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

@@ -12,6 +12,7 @@ class LearnFragment: Fragment(R.layout.fragment_learn) {
         super.onViewCreated(view, savedInstanceState)
 
         val sectionTitles: List<Int> = listOf(R.string.section1, R.string.section2, R.string.section3, R.string.section4)
+        val quickTips: List<Int> = listOf(R.string.q_t_waste, R.string.q_t_food, R.string.q_t_transport, R.string.q_t_energy)
 
         val dummyArticles: MutableList<MutableList<Article>> = mutableListOf()
 
@@ -19,7 +20,7 @@ class LearnFragment: Fragment(R.layout.fragment_learn) {
             dummyArticles.add(generateDummyArticles(getString(stringId)))
         }
 
-        val sectionAdapter = PagerAdapter(dummyArticles)
+        val sectionAdapter = PagerAdapter(dummyArticles, quickTips)
         viewPagerSections.adapter = sectionAdapter
 
         TabLayoutMediator(sectionTabs, viewPagerSections) { tab, position ->

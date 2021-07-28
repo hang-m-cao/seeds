@@ -6,7 +6,7 @@
 
     <string name="featured">Featured</string>
     <string name="saved">Saved</string>
-    <string name="all">All</string>
+    <string name="all">All Articles</string>
 
     <string name="section1">Waste</string>
     <string name="section2">Food</string>
@@ -14,4 +14,20 @@
     <string name="section4">Energy</string>
 
     <string name="quick_tips">Quick Tips:</string>
+    <string name="q_t_waste">replace plastic water bottles with reusable
+        \ncreate a compost bin for your house/dorm to place food scraps
+        \nlearn easy, healthy recipes to avoid take-out waste</string>
+
+    <string name="q_t_food">reduce consumption of meat and dairy products
+        \ntry advocating for campus-wide Meatless Mondays
+        \nfocus on limiting dine-in/take-out meals and shift toward cooking at home</string>
+
+    <string name="q_t_transport">try walking or biking to destinations &lt;2 miles away
+        \nresearch alternatives for airplane trips (trains, buses, car-shares)
+        \navoid online delivery purchase and try to consume locally</string>
+
+    <string name="q_t_energy">replace old light-bulbs with energy-efficient alternatives
+        \nencourage turning lights and appliances off when not in use
+        \nswitch to cooler showers</string>
+
 </resources>
