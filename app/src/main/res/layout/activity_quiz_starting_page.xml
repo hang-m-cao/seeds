@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuizStartingPage">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/quiz"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="380dp"
+        android:layout_height="500dp"
+        app:cardCornerRadius="30dp"
+        app:cardBackgroundColor="#c0f2a8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <TextView
+            android:id="@+id/quiz_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fossil_fuel_consumption_quiz"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            android:layout_marginTop="20dp"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/what_gets_measured_gets_managed_n_peter_drucker"
+            android:layout_marginTop="150dp"
+            android:layout_marginHorizontal="20dp"
+            android:textSize="20sp"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="230dp"
+            android:textColor="@color/black"
+            android:layout_marginHorizontal="25dp"
+            android:textSize="25sp"
+            android:text="@string/ever_wondered_what_your_carbon_footprint_actually_is_our_hand_crafted_quiz_has_been_explicitly_designed_for_gen_z_and_is_based_on_data_from_and" />
+
+        <Button
+            android:id="@+id/start_quiz_btn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|start"
+            android:layout_marginBottom="20dp"
+            android:text="@string/start_quiz"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/quiz_btn"
+            />
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

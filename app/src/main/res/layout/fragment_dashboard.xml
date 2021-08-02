@@ -102,16 +102,29 @@
             android:textAlignment="center"
             android:textColor="@color/black"/>
 
-        <Button
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center_horizontal"
-            android:layout_marginBottom="20dp"
-            android:text="@string/take_our_quiz"
-            android:background="@drawable/quiz_btn"
-            />
+<!--        <Button-->
+<!--            android:id="@+id/take_quiz_btn"-->
+<!--            android:layout_width="200dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="bottom|center_horizontal"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            android:text="@string/take_our_quiz"-->
+<!--            android:background="@drawable/quiz_btn"-->
+<!--            />-->
 
     </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/take_quiz_btn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="245dp"
+        android:text="@string/take_our_quiz"
+        android:background="@drawable/quiz_btn"
+        />
 
     <ImageView
         android:id="@+id/mission_image"
