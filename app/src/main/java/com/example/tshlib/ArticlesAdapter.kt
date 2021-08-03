@@ -1,5 +1,6 @@
 package com.example.tshlib
 
+import android.opengl.Visibility
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -40,6 +41,13 @@ class ArticlesAdapter (private val articles : MutableList<Article>):
             heartUnliked.setOnClickListener{
                 heartLiked.visibility = View.VISIBLE
                 heartUnliked.visibility = View.INVISIBLE
+            }
+
+            if (currArticle.image == null) {
+                articlePic.visibility = View.GONE
+            }
+            else {
+                // TODO: use Picasso library to add image link to image view
             }
 
         }
