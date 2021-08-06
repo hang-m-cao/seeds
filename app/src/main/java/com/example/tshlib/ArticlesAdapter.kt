@@ -1,9 +1,11 @@
 package com.example.tshlib
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.article_card.view.*
 
 class ArticlesAdapter (private val articles : MutableList<Article>):
@@ -40,6 +42,16 @@ class ArticlesAdapter (private val articles : MutableList<Article>):
             heartUnliked.setOnClickListener{
                 heartLiked.visibility = View.VISIBLE
                 heartUnliked.visibility = View.INVISIBLE
+            }
+
+            currArticle.image?.let { Log.d("article", it) }
+
+            if (currArticle.image == null) {
+                articlePic.visibility = View.GONE
+            }
+            else {
+                Picasso.get().load(currArticle.image).resize(200, 0)
+                    .centerCrop().into(articlePic)
             }
 
         }
