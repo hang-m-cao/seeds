@@ -8,7 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="black_transparent_25">#40000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="purple_quiz_btn">#555EEC</color>
+    <color name="purple">#555EEC</color>
     <color name="home_page_yellow">#FEF896</color>
     <color name="card_background_green">#C0F2A8</color>
     <color name="light_gray">#9E9E9E</color>
@@ -18,5 +18,5 @@
     <color name="dark_green">#5D712A</color>
     <color name="light_green">#BBF2AB</color>
     <color name="iris">#6769BA</color>
-    <color name="dark_gray_text">#474443</color>
+    <color name="dark_gray_text">#323030</color>
 </resources>

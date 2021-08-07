@@ -41,9 +41,9 @@
     </style>
 
     <style name="ThemeOverlay.App.TabLayout" parent="">
-        <item name="colorPrimary">@color/iris</item>
+        <item name="colorPrimary">@color/purple</item>
         <item name="colorSurface">@color/white</item>
-        <item name="colorOnSurface">@color/dark_gray_text</item>
+        <item name="colorOnSurface">@color/black</item>
     </style>
 
     <!-- Button text appearance. -->
