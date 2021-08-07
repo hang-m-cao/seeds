@@ -19,7 +19,7 @@ class ProfileFragment: Fragment(R.layout.fragment_profile) {
             dummyArticles.add(Article(0, "Article $i", "", "", "Tag $i"))
         }
 
-        myArticlesRecyclerView.adapter = SavedArticlesAdapter(dummyArticles)
-        myArticlesRecyclerView.layoutManager = LinearLayoutManager(context)
+        my_articles_recyclerview.adapter = SavedArticlesAdapter(dummyArticles)
+        my_articles_recyclerview.layoutManager = LinearLayoutManager(context)
     }
 }

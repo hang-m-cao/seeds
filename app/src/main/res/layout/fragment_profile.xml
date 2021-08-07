@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/profilePageTitle"
+        android:id="@+id/profile_page_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/profile"
@@ -20,7 +20,7 @@
         android:layout_marginVertical="20dp"/>
 
     <TextView
-        android:id="@+id/myArticlesHeader"
+        android:id="@+id/my_articles_header"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -32,11 +32,11 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profilePageTitle"
+        app:layout_constraintTop_toBottomOf="@+id/profile_page_title"
         android:fontFamily="@font/lato"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/myArticlesRecyclerView"
+        android:id="@+id/my_articles_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
@@ -44,6 +44,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/myArticlesHeader" />
+        app:layout_constraintTop_toBottomOf="@+id/my_articles_header" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

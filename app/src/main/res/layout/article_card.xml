@@ -19,7 +19,7 @@
         android:layout_marginHorizontal="10dp"/>
 
     <TextView
-        android:id="@+id/articleTitle"
+        android:id="@+id/article_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="5dp"

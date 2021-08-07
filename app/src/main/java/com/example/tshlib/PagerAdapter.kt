@@ -25,8 +25,8 @@ class PagerAdapter
         val articlesAdapter = ArticlesAdapter(articles[position])
 
         holder.itemView.apply {
-            articlesRecyclerView.adapter = articlesAdapter
-            articlesRecyclerView.layoutManager = LinearLayoutManager(context)
+            articles_recyclerview.adapter = articlesAdapter
+            articles_recyclerview.layoutManager = LinearLayoutManager(context)
 
         }
 

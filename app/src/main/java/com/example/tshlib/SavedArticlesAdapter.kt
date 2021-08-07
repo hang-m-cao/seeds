@@ -22,11 +22,11 @@ class SavedArticlesAdapter (private val articles : MutableList<Article>):
         val currArticle = articles[position]
 
         holder.itemView.apply {
-            articleTitle.text = currArticle.title
+            article_title.text = currArticle.title
 
-            articleTag.text = currArticle.tag
+            article_tag.text = currArticle.tag
 
-            removeButton.setOnClickListener {
+            remove_button.setOnClickListener {
                 articles.remove(currArticle)
                 notifyDataSetChanged()
             }
