@@ -9,7 +9,7 @@
         android:id="@+id/home_page_heading"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="#fef896"
+        android:background="@color/home_page_yellow"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -72,7 +72,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:paddingHorizontal="60dp"
-        android:text="@string/empowering_gen_z_to_track_manage_and_reduce_their_fossil_fuel_intake"
+        android:text="@string/purpose_statement"
         android:textAlignment="center"
         android:textStyle="italic"
         android:textSize="18sp"
@@ -90,27 +90,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:cardCornerRadius="30dp"
-        app:cardBackgroundColor="#c0f2a8">
+        app:cardBackgroundColor="@color/card_background_green">
 
         <TextView
             android:id="@+id/quiz_card_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="@string/been_making_progress_on_your_carbon_footprint_reduction_journey"
+            android:text="@string/home_page_question"
             android:paddingHorizontal="10dp"
             android:textAlignment="center"
             android:textColor="@color/black"/>
-
-<!--        <Button-->
-<!--            android:id="@+id/take_quiz_btn"-->
-<!--            android:layout_width="200dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_gravity="bottom|center_horizontal"-->
-<!--            android:layout_marginBottom="20dp"-->
-<!--            android:text="@string/take_our_quiz"-->
-<!--            android:background="@drawable/quiz_btn"-->
-<!--            />-->
 
     </androidx.cardview.widget.CardView>
 
