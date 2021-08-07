@@ -22,14 +22,33 @@ class ArticlesAdapter (private val articles : MutableList<Article>):
         val currArticle = articles[position]
 
         holder.itemView.apply {
-            tv_article_title.text = currArticle.title
-            tv_article_summary.text = currArticle.summary ?: "No summary available"
+            articleTitle.text = currArticle.title
+
+            if (currArticle.saved) {
+                heartLiked.visibility = View.VISIBLE
+                heartUnliked.visibility = View.INVISIBLE
+            } else {
+                heartLiked.visibility = View.INVISIBLE
+                heartUnliked.visibility = View.VISIBLE
+            }
+
+            heartLiked.setOnClickListener{
+                heartLiked.visibility = View.INVISIBLE
+                heartUnliked.visibility = View.VISIBLE
+            }
+
+            heartUnliked.setOnClickListener{
+                heartLiked.visibility = View.VISIBLE
+                heartUnliked.visibility = View.INVISIBLE
+            }
+
         }
     }
 
     override fun getItemCount(): Int {
         return articles.size
     }
+
 
 
 }

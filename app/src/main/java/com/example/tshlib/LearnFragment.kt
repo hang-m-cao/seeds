@@ -3,32 +3,39 @@ package com.example.tshlib
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.fragment_learn.*
 
 class LearnFragment: Fragment(R.layout.fragment_learn) {
 
-    private lateinit var learnAdapter: LearnAdapter
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val sectionTitles: MutableList<String> = mutableListOf("Featured", "Waste", "Food", "Energy", "Pollution")
-        val dummyArticles: MutableList<Article> = mutableListOf()
+        val sectionTitles: List<Int> = listOf(R.string.section1, R.string.section2, R.string.section3, R.string.section4)
+        val quickTips: List<Int> = listOf(R.string.q_t_waste, R.string.q_t_food, R.string.q_t_transport, R.string.q_t_energy)
 
-        for(i in 1..3) {
-            dummyArticles.add(Article("article $i", null))
+        val dummyArticles: MutableList<MutableList<Article>> = mutableListOf()
+
+        for(stringId in sectionTitles) {
+            dummyArticles.add(generateDummyArticles(getString(stringId)))
         }
 
-        val sections: MutableList<LearnSection> = mutableListOf()
+        val sectionAdapter = PagerAdapter(dummyArticles, quickTips)
+        viewPagerSections.adapter = sectionAdapter
 
-        for(i in 0 until sectionTitles.size) {
-            sections.add(LearnSection(sectionTitles[i], dummyArticles))
+        TabLayoutMediator(sectionTabs, viewPagerSections) { tab, position ->
+            tab.setText(sectionTitles[position])
+        }.attach()
+
+    }
+
+    private fun generateDummyArticles(sectionTitle: String): MutableList<Article> {
+        val result = mutableListOf<Article>()
+
+        for (i in 1..sectionTitle.length) {
+            result.add(Article(0,"Article $i in $sectionTitle", null, null))
         }
 
-        learnAdapter = LearnAdapter(sections)
-        rv_learn_sections.adapter = learnAdapter
-        rv_learn_sections.layoutManager = LinearLayoutManager(context)
-
+        return result
     }
 }
