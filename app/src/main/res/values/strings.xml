@@ -3,6 +3,18 @@
     <string name="dashboard">Dashboard</string>
     <string name="learn">Learn</string>
     <string name="profile">Profile</string>
+    <string name="actus">actus</string>
+    <string name="home_page_question">Been making progress on your carbon footprint reduction journey?</string>
+    <string name="take_our_quiz"><![CDATA[Take Our Quiz >]]></string>
+    <string name="purpose_statement">Empowering Gen-Z to <b>track</b>, <b>manage</b>, and <b>reduce</b> their fossil fuel intake</string>
+    <string name="todo">TODO</string>
+    <string name="carbon_image">carbon image</string>
+    <string name="cactus">cactus</string>
+    <string name="quiz">Quiz</string>
+    <string name="fossil_fuel_consumption_quiz">Fossil Fuel Consumption Quiz</string>
+    <string name="quote"><i>"What gets measured gets managed." - Peter Drucker</i></string>
+    <string name="quiz_carbon_footprint">Ever wondered what your carbon footprint actually is? Our hand-crafted quiz has been explicitly designed for Gen-Z and is based on data from ____ and ____.</string>
+    <string name="start_quiz"><![CDATA[Start Quiz >]]></string>
 
     <string name="featured">Featured</string>
     <string name="saved">Saved</string>
