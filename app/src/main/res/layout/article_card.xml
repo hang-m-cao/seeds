@@ -32,7 +32,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/articlePic"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Title " />
+        tools:text="Title" />
 
     <ImageView
         android:id="@+id/heartUnliked"
