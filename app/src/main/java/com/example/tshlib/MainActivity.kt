@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
         bottomNav.setOnNavigationItemSelectedListener {
             when(it.itemId) {
-                R.id.nav_dashboard->setCurrentFragment(dashboardFragment)
+                R.id.nav_dashboard->setCurrentFragment(quizFragment)
                 R.id.nav_learn->setCurrentFragment(learnFragment)
                 R.id.nav_profile->setCurrentFragment(profileFragment)
 
