@@ -42,13 +42,6 @@ class ArticlesAdapter (private val articles : MutableList<Article>):
                 heart_unliked.visibility = View.INVISIBLE
             }
 
-            if (currArticle.image == null) {
-                article_pic.visibility = View.GONE
-            }
-            else {
-                // TODO: use Picasso library to add image link to image view
-            }
-
         }
     }
 
