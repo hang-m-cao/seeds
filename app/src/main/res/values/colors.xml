@@ -9,6 +9,10 @@
     <color name="white">#FFFFFFFF</color>
     <color name="light_gray">#9E9E9E</color>
     <color name="light_blue">#88C5E6</color>
-    <color name="light_green">#B1FFD0</color>
-    <color name="red">#fe656f</color>
+    <color name="teal_green">#B1FFD0</color>
+    <color name="red">#FE656F</color>
+    <color name="dark_green">#5D712A</color>
+    <color name="light_green">#BBF2AB</color>
+    <color name="iris">#6769BA</color>
+    <color name="dark_gray_text">#474443</color>
 </resources>
