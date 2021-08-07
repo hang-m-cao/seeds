@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         val dashboardFragment : Fragment = DashboardFragment()
         val learnFragment : Fragment = LearnFragment()
         val profileFragment : Fragment = ProfileFragment()
+        val quizFragment : Fragment = QuizFragment()
 
 
         setCurrentFragment(dashboardFragment)
