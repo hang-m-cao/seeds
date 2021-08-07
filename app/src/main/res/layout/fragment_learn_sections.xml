@@ -50,7 +50,7 @@
                 android:id="@+id/cactus_logo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/cactus_logo" />
+                app:srcCompat="@drawable/cactus" />
 
         </LinearLayout>
 

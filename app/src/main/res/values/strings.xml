@@ -3,6 +3,18 @@
     <string name="dashboard">Dashboard</string>
     <string name="learn">Learn</string>
     <string name="profile">Your Profile</string>
+    <string name="actus">actus</string>
+    <string name="home_page_question">Been making progress on your carbon footprint reduction journey?</string>
+    <string name="take_our_quiz"><![CDATA[Take Our Quiz >]]></string>
+    <string name="purpose_statement">Empowering Gen-Z to <b>track</b>, <b>manage</b>, and <b>reduce</b> their fossil fuel intake</string>
+    <string name="todo">TODO</string>
+    <string name="carbon_image">carbon image</string>
+    <string name="cactus">cactus</string>
+    <string name="quiz">Quiz</string>
+    <string name="fossil_fuel_consumption_quiz">Fossil Fuel Consumption Quiz</string>
+    <string name="quote"><i>"What gets measured gets managed." - Peter Drucker</i></string>
+    <string name="quiz_carbon_footprint">Ever wondered what your carbon footprint actually is? Our hand-crafted quiz has been explicitly designed for Gen-Z and is based on data from ____ and ____.</string>
+    <string name="start_quiz"><![CDATA[Start Quiz >]]></string>
 
     <string name="featured">Featured</string>
     <string name="saved">Saved</string>
@@ -15,4 +27,20 @@
     <string name="section4">Energy</string>
 
     <string name="quick_tips">Quick Tips:</string>
+    <string name="q_t_waste">replace plastic water bottles with reusable
+        \ncreate a compost bin for your house/dorm to place food scraps
+        \nlearn easy, healthy recipes to avoid take-out waste</string>
+
+    <string name="q_t_food">reduce consumption of meat and dairy products
+        \ntry advocating for campus-wide Meatless Mondays
+        \nfocus on limiting dine-in/take-out meals and shift toward cooking at home</string>
+
+    <string name="q_t_transport">try walking or biking to destinations &lt;2 miles away
+        \nresearch alternatives for airplane trips (trains, buses, car-shares)
+        \navoid online delivery purchase and try to consume locally</string>
+
+    <string name="q_t_energy">replace old light-bulbs with energy-efficient alternatives
+        \nencourage turning lights and appliances off when not in use
+        \nswitch to cooler showers</string>
+
 </resources>
