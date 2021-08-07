@@ -22,7 +22,7 @@ class ArticlesAdapter (private val articles : MutableList<Article>):
         val currArticle = articles[position]
 
         holder.itemView.apply {
-            articleTitle.text = currArticle.title
+            article_title.text = currArticle.title
 
             if (currArticle.saved) {
                 heartLiked.visibility = View.VISIBLE

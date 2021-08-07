@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val bottomNav: BottomNavigationView = findViewById(R.id.bottomNavigation)
+        val bottomNav: BottomNavigationView = findViewById(R.id.bottom_navigation)
         val dashboardFragment : Fragment = DashboardFragment()
         val learnFragment : Fragment = LearnFragment()
         val profileFragment : Fragment = ProfileFragment()
@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setCurrentFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction().apply {
-            replace(R.id.mainFragment, fragment)
+            replace(R.id.main_fragment, fragment)
             addToBackStack(null)
             commit()
         }
