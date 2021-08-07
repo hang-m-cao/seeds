@@ -24,34 +24,34 @@ class ArticlesAdapter (private val articles : MutableList<Article>):
         val currArticle = articles[position]
 
         holder.itemView.apply {
-            articleTitle.text = currArticle.title
+            article_title.text = currArticle.title
 
             if (currArticle.saved) {
-                heartLiked.visibility = View.VISIBLE
-                heartUnliked.visibility = View.INVISIBLE
+                heart_liked.visibility = View.VISIBLE
+                heart_unliked.visibility = View.INVISIBLE
             } else {
-                heartLiked.visibility = View.INVISIBLE
-                heartUnliked.visibility = View.VISIBLE
+                heart_liked.visibility = View.INVISIBLE
+                heart_unliked.visibility = View.VISIBLE
             }
 
-            heartLiked.setOnClickListener{
-                heartLiked.visibility = View.INVISIBLE
-                heartUnliked.visibility = View.VISIBLE
+            heart_liked.setOnClickListener{
+                heart_liked.visibility = View.INVISIBLE
+                heart_unliked.visibility = View.VISIBLE
             }
 
-            heartUnliked.setOnClickListener{
-                heartLiked.visibility = View.VISIBLE
-                heartUnliked.visibility = View.INVISIBLE
+            heart_unliked.setOnClickListener{
+                heart_liked.visibility = View.VISIBLE
+                heart_unliked.visibility = View.INVISIBLE
             }
 
             currArticle.image?.let { Log.d("article", it) }
 
             if (currArticle.image == null) {
-                articlePic.visibility = View.GONE
+                article_pic.visibility = View.GONE
             }
             else {
                 Picasso.get().load(currArticle.image).resize(200, 0)
-                    .centerCrop().into(articlePic)
+                    .centerCrop().into(article_pic)
             }
 
         }

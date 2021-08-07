@@ -11,33 +11,34 @@
         android:layout_height="match_parent" >
 
         <TextView
-            android:id="@+id/quickTipsTitle"
+            android:id="@+id/quick_tips_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="40dp"
             android:layout_marginVertical="10dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
             android:paddingHorizontal="10dp"
             android:text="@string/quick_tips"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:textColor="@color/black"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/quickTipsCard"
+            android:id="@+id/quick_tips_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/quickTipsTitle"
+            app:layout_constraintTop_toBottomOf="@id/quick_tips_title"
             android:padding="10dp"
             android:layout_marginHorizontal="40dp"
             android:background="@drawable/ic_decorative_blob">
 
             <TextView
-                android:id="@+id/quickTipsText"
+                android:id="@+id/quick_tips_text"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:background="@drawable/ic_text_bubble"
@@ -50,18 +51,18 @@
                 tools:text="hello" />
 
             <ImageView
-                android:id="@+id/cactusLogo"
+                android:id="@+id/cactus_logo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginHorizontal="40dp"
-                app:layout_constraintTop_toBottomOf="@+id/quickTipsText"
-                app:srcCompat="@drawable/cactus_logo" />
+                app:layout_constraintTop_toBottomOf="@+id/quick_tips_text"
+                app:srcCompat="@drawable/cactus" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
-            android:id="@+id/articlesHeader"
+            android:id="@+id/article_header"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -73,10 +74,10 @@
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/quickTipsCard" />
+            app:layout_constraintTop_toBottomOf="@+id/quick_tips_card" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/articlesRecyclerView"
+            android:id="@+id/articles_recyclerview"
             android:layout_width="match_parent"
             android:layout_height="560dp"
             android:layout_marginVertical="10dp"
@@ -85,7 +86,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/articlesHeader" />
+            app:layout_constraintTop_toBottomOf="@+id/article_header" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

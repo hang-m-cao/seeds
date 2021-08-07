@@ -21,9 +21,9 @@ class LearnFragment: Fragment(R.layout.fragment_learn) {
         }
 
         val sectionAdapter = PagerAdapter(dummyArticles, quickTips)
-        viewPagerSections.adapter = sectionAdapter
+        learn_viewpager_sections.adapter = sectionAdapter
 
-        TabLayoutMediator(sectionTabs, viewPagerSections) { tab, position ->
+        TabLayoutMediator(learn_section_tabs, learn_viewpager_sections) { tab, position ->
             tab.setText(sectionTitles[position])
         }.attach()
 
@@ -34,6 +34,7 @@ class LearnFragment: Fragment(R.layout.fragment_learn) {
 
         for (i in 1..sectionTitle.length) {
             result.add(Article(0,"Article $i in $sectionTitle", link = null))
+
         }
 
         return result
