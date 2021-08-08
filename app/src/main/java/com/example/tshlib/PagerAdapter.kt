@@ -40,7 +40,6 @@ class PagerAdapter
             val text = resources.getString(quickTips[position])
             quick_tips_text.text = formatQuickTipsText(text)
         }
-
     }
 
     override fun getItemCount(): Int {

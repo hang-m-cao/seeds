@@ -98,9 +98,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/home_page_question"
-            android:paddingHorizontal="10dp"
+            android:layout_marginHorizontal="20dp"
             android:textAlignment="center"
-            android:textColor="@color/black"/>
+            android:textSize="16sp"/>
 
     </androidx.cardview.widget.CardView>
 
@@ -114,7 +114,7 @@
         android:layout_marginTop="245dp"
         android:text="@string/take_our_quiz"
         android:background="@drawable/quiz_btn"
-        />
+        app:backgroundTint="@null"/>
 
     <ImageView
         android:id="@+id/mission_image"
