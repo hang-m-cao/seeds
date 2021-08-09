@@ -1,12 +1,15 @@
 package com.example.tshlib
 
+import android.telecom.Call
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.article_card.view.*
+import java.lang.Exception
 
 class ArticlesAdapter (private val articles : MutableList<Article>):
     RecyclerView.Adapter<ArticlesAdapter.ArticlesViewHolder>() {
@@ -44,14 +47,21 @@ class ArticlesAdapter (private val articles : MutableList<Article>):
                 heart_unliked.visibility = View.INVISIBLE
             }
 
-            currArticle.image?.let { Log.d("article", it) }
+            if (!currArticle.image.isNullOrBlank()) {
+                Picasso.get().load(currArticle.image).fit()
+                    .centerCrop().into(article_pic, object: Callback {
+                        override fun onSuccess() {
+                            Log.d("picasso", "successfully added image")
+                        }
 
-            if (currArticle.image == null) {
+                        override fun onError(e: Exception?) {
+                            article_pic.visibility = View.GONE
+                            Log.d("picasso", e.toString())
+                        }
+
+                    })
+            } else {
                 article_pic.visibility = View.GONE
-            }
-            else {
-                Picasso.get().load(currArticle.image).resize(200, 0)
-                    .centerCrop().into(article_pic)
             }
 
         }
