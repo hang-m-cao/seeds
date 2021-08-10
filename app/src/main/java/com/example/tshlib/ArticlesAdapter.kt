@@ -1,6 +1,5 @@
 package com.example.tshlib
 
-import android.telecom.Call
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +9,7 @@ import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.article_card.view.*
 import java.lang.Exception
+import android.content.Intent
 
 class ArticlesAdapter (private val articles : MutableList<Article>):
     RecyclerView.Adapter<ArticlesAdapter.ArticlesViewHolder>() {
@@ -27,6 +27,14 @@ class ArticlesAdapter (private val articles : MutableList<Article>):
         val currArticle = articles[position]
 
         holder.itemView.apply {
+            article_card.setOnClickListener {
+                val intent = Intent(context, ArticleViewActivity::class.java)
+
+                intent.putExtra("link", currArticle.link)
+                context.startActivity(intent)
+
+            }
+
             article_title.text = currArticle.title
 
             if (currArticle.saved) {
