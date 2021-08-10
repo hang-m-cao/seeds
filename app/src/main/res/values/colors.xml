@@ -10,4 +10,8 @@
     <color name="purple_quiz_btn">#555EEC</color>
     <color name="home_page_yellow">#FEF896</color>
     <color name="card_background_green">#C0F2A8</color>
+    <color name="light_gray">#9E9E9E</color>
+    <color name="light_blue">#88C5E6</color>
+    <color name="light_green">#B1FFD0</color>
+    <color name="red">#fe656f</color>
 </resources>
