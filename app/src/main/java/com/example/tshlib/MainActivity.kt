@@ -15,7 +15,9 @@ class MainActivity : AppCompatActivity() {
         val dashboardFragment : Fragment = DashboardFragment()
         val learnFragment : Fragment = LearnFragment()
         val profileFragment : Fragment = ProfileFragment()
+
         var currentFragment: Fragment = dashboardFragment
+
         if(intent.hasExtra("startingFragment")) {
             when(intent.getStringExtra("startingFragment")) {
                 "learn" -> currentFragment = learnFragment
