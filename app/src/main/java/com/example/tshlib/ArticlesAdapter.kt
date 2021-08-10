@@ -59,6 +59,7 @@ class ArticlesAdapter (private val articles : MutableList<Article>):
                 Picasso.get().load(currArticle.image).fit()
                     .centerCrop().into(article_pic, object: Callback {
                         override fun onSuccess() {
+                            article_pic.visibility = View.VISIBLE
                             Log.d("picasso", "successfully added image")
                         }
 
@@ -68,8 +69,6 @@ class ArticlesAdapter (private val articles : MutableList<Article>):
                         }
 
                     })
-            } else {
-                article_pic.visibility = View.GONE
             }
 
         }

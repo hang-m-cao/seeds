@@ -33,7 +33,11 @@ class LearnFragment: Fragment(R.layout.fragment_learn) {
         val result = mutableListOf<Article>()
 
         for (i in 1..sectionTitle.length) {
-            result.add(Article(0,"Article $i in $sectionTitle", link = "", tag = sectionTitle, image = null))
+            result.add(Article(id = 0,
+                title = "Article $i in $sectionTitle",
+                link = "https://foodprint.org/blog/6-ways-to-cook-with-less-meat-but-better-meat/",
+                tag = sectionTitle,
+                image = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.brother.is%2Fblog%2Fenvironment%2F2019%2F10-easy-ways-to-help-the-environment&psig=AOvVaw3BT3hGihMklUhF8PmAVPEM&ust=1628656268999000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCLDumtTPpfICFQAAAAAdAAAAABAD"))
 
         }
 
