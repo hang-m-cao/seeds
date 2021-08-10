@@ -3,7 +3,9 @@
     <string name="dashboard">Dashboard</string>
     <string name="learn">Learn</string>
     <string name="profile">Profile</string>
+    <string name="your_profile">Your Profile</string>
     <string name="actus">actus</string>
+
     <string name="home_page_question">Been making progress on your carbon footprint reduction journey?</string>
     <string name="take_our_quiz"><![CDATA[Take Our Quiz >]]></string>
     <string name="purpose_statement">Empowering Gen-Z to <b>track</b>, <b>manage</b>, and <b>reduce</b> their fossil fuel intake</string>
@@ -18,7 +20,8 @@
 
     <string name="featured">Featured</string>
     <string name="saved">Saved</string>
-    <string name="all">All Articles</string>
+    <string name="all">All</string>
+    <string name="my_articles">My Articles</string>
 
     <string name="section1">Waste</string>
     <string name="section2">Food</string>

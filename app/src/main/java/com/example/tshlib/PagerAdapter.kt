@@ -34,13 +34,12 @@ class PagerAdapter
         val articlesAdapter = ArticlesAdapter(articles[position])
 
         holder.itemView.apply {
-            articlesRecyclerView.adapter = articlesAdapter
-            articlesRecyclerView.layoutManager = LinearLayoutManager(context)
+            articles_recyclerview.adapter = articlesAdapter
+            articles_recyclerview.layoutManager = LinearLayoutManager(context)
 
             val text = resources.getString(quickTips[position])
-            quickTipsText.text = formatQuickTipsText(text)
+            quick_tips_text.text = formatQuickTipsText(text)
         }
-
     }
 
     override fun getItemCount(): Int {
