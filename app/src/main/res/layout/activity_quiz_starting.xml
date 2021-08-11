@@ -66,7 +66,6 @@
             android:background="@drawable/quiz_btn"
             app:backgroundTint="@null"/>
 
-
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -74,7 +73,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/bottom_nav_menu" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="@color/material_on_primary_emphasis_medium"
+        app:itemTextColor="@color/material_on_primary_emphasis_medium" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,16 +15,26 @@ class MainActivity : AppCompatActivity() {
         val dashboardFragment : Fragment = DashboardFragment()
         val learnFragment : Fragment = LearnFragment()
         val profileFragment : Fragment = ProfileFragment()
+
         var currentFragment: Fragment = dashboardFragment
+        var currentFragIconSelected: Int = R.id.nav_dashboard
+
         if(intent.hasExtra("startingFragment")) {
             when(intent.getStringExtra("startingFragment")) {
-                "learn" -> currentFragment = learnFragment
-                "profile" -> currentFragment = profileFragment
+                "learn" -> {
+                    currentFragment = learnFragment
+                    currentFragIconSelected = R.id.nav_learn
+                }
+                "profile" -> {
+                    currentFragment = profileFragment
+                    currentFragIconSelected = R.id.nav_profile
+                }
 
             }
         }
 
         setCurrentFragment(currentFragment)
+        bottomNav.selectedItemId = currentFragIconSelected
 
         bottomNav.setOnNavigationItemSelectedListener {
             when(it.itemId) {
