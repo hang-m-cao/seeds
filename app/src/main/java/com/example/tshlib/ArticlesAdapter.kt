@@ -36,13 +36,13 @@ class ArticlesAdapter (private val articles : MutableList<Article>):
 
             article_title.text = currArticle.title
 
-            if (currArticle.saved) {
-                heart_liked.visibility = View.VISIBLE
-                heart_unliked.visibility = View.INVISIBLE
-            } else {
-                heart_liked.visibility = View.INVISIBLE
-                heart_unliked.visibility = View.VISIBLE
-            }
+//            if (currArticle.saved) {
+//                heart_liked.visibility = View.VISIBLE
+//                heart_unliked.visibility = View.INVISIBLE
+//            } else {
+//                heart_liked.visibility = View.INVISIBLE
+//                heart_unliked.visibility = View.VISIBLE
+//            }
 
             heart_liked.setOnClickListener{
                 heart_liked.visibility = View.INVISIBLE
