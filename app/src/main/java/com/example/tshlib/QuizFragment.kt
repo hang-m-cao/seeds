@@ -36,12 +36,7 @@ class QuizFragment: Fragment(R.layout.fragment_quiz) {
 
         for (i in 1..3) {
             result.add(
-                Question(
-                    title = "Question $i",
-                    option1 = "",
-                    option2 = "",
-                    option3 = "",
-                    option4 = ""
+                Question(title = "Question $i", option1 = "", option2 = "", option3 = "", option4 = ""
                 )
             )
         }

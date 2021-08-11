@@ -23,7 +23,7 @@
         android:id="@+id/btn_quiz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Quiz"
+        android:text="Take Our Quiz"
         android:layout_gravity="center"/>
 
 
