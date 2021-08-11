@@ -1,5 +1,6 @@
 package com.example.tshlib
 
+import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -8,8 +9,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.article_card.view.*
-import java.lang.Exception
-import android.content.Intent
 
 class ArticlesAdapter (private val articles : MutableList<Article>):
     RecyclerView.Adapter<ArticlesAdapter.ArticlesViewHolder>() {
@@ -56,10 +55,10 @@ class ArticlesAdapter (private val articles : MutableList<Article>):
             }
 
             if (!currArticle.image.isNullOrBlank()) {
+                article_pic.visibility = View.VISIBLE
                 Picasso.get().load(currArticle.image).fit()
                     .centerCrop().into(article_pic, object: Callback {
                         override fun onSuccess() {
-                            article_pic.visibility = View.VISIBLE
                             Log.d("picasso", "successfully added image")
                         }
 
@@ -69,6 +68,8 @@ class ArticlesAdapter (private val articles : MutableList<Article>):
                         }
 
                     })
+            } else {
+                article_pic.visibility = View.GONE
             }
 
         }
@@ -77,7 +78,4 @@ class ArticlesAdapter (private val articles : MutableList<Article>):
     override fun getItemCount(): Int {
         return articles.size
     }
-
-
-
 }
