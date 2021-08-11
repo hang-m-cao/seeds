@@ -5,6 +5,5 @@ data class Article (
         val title: String,
         val image: String?,
         val link: String,
-        val tag: String,
-        val saved: Boolean = false
+        val tag: String
 )
