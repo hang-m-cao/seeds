@@ -13,14 +13,31 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val bottomNav: BottomNavigationView = findViewById(R.id.bottomNavigation)
+        val bottomNav: BottomNavigationView = findViewById(R.id.bottom_navigation)
         val dashboardFragment : Fragment = DashboardFragment()
         val learnFragment : Fragment = LearnFragment()
         val profileFragment : Fragment = ProfileFragment()
-        val quizFragment : Fragment = QuizFragment()
 
 
-        setCurrentFragment(dashboardFragment)
+        var currentFragment: Fragment = dashboardFragment
+        var currentFragIconSelected: Int = R.id.nav_dashboard
+
+        if(intent.hasExtra("startingFragment")) {
+            when(intent.getStringExtra("startingFragment")) {
+                "learn" -> {
+                    currentFragment = learnFragment
+                    currentFragIconSelected = R.id.nav_learn
+                }
+                "profile" -> {
+                    currentFragment = profileFragment
+                    currentFragIconSelected = R.id.nav_profile
+                }
+
+            }
+        }
+
+        setCurrentFragment(currentFragment)
+        bottomNav.selectedItemId = currentFragIconSelected
 
         bottomNav.setOnNavigationItemSelectedListener {
             when(it.itemId) {
@@ -36,7 +53,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setCurrentFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction().apply {
-            replace(R.id.mainFragment, fragment)
+            replace(R.id.main_fragment, fragment)
             addToBackStack(null)
             commit()
         }

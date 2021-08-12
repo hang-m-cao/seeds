@@ -1,19 +1,14 @@
 package com.example.tshlib
 
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.tabs.TabLayoutMediator
-import kotlinx.android.synthetic.main.fragment_learn.*
-import kotlinx.android.synthetic.main.fragment_quiz.*
+import kotlinx.android.synthetic.main.activity_quiz.*
 
-class QuizFragment: Fragment(R.layout.fragment_quiz) {
-
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
+class QuizActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_quiz)
         val sectionTitles: MutableList<String> =
             mutableListOf("Waste", "Food", "Energy", "Pollution")
         val dummyQuestions: MutableList<MutableList<Question>> = mutableListOf()
@@ -25,12 +20,11 @@ class QuizFragment: Fragment(R.layout.fragment_quiz) {
         val sectionAdapter = QuizPagerAdapter(dummyQuestions)
         quiz_viewpager.adapter = sectionAdapter
 
-        TabLayoutMediator(sectionTabs, quiz_viewpager) { tab, position ->
+        TabLayoutMediator(tab, quiz_viewpager) { tab, position ->
             tab.setText(sectionTitles[position])
         }.attach()
 
     }
-
     private fun generateDummyQuestions(): MutableList<Question> {
         val result = mutableListOf<Question>()
 

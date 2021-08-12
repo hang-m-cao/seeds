@@ -8,19 +8,19 @@ import androidx.recyclerview.widget.RecyclerView
 
 class QuizPagerAdapter
     (private val questions: MutableList<MutableList<Question>>):
-    RecyclerView.Adapter<QuizPagerAdapter.QuizPageHolder>() {
-    inner class QuizPageHolder(view: View) : RecyclerView.ViewHolder(view)
+    RecyclerView.Adapter<QuizPagerAdapter.QuizPagerHolder>() {
+    inner class QuizPagerHolder(view: View) : RecyclerView.ViewHolder(view)
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): QuizPageHolder {
-        return QuizPageHolder(
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): QuizPagerHolder {
+        return QuizPagerHolder(
             LayoutInflater.from(parent.context)
                 .inflate(R.layout.fragment_quiz_section, parent, false)
         )
     }
 
 
-    override fun onBindViewHolder(holder: QuizPageHolder, position: Int) {
+    override fun onBindViewHolder(holder: QuizPagerHolder, position: Int) {
         holder.itemView.apply {
             textView.text = "Potatoes are great, amazing $position"
         }
