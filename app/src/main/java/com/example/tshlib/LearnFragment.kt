@@ -1,10 +1,23 @@
 package com.example.tshlib
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.fragment_learn.*
+import com.github.kittinunf.fuel.Fuel
+import com.github.kittinunf.fuel.android.extension.responseJson
+import com.github.kittinunf.fuel.core.FuelManager
+import com.github.kittinunf.fuel.coroutines.awaitString
+import com.github.kittinunf.fuel.coroutines.awaitStringResponse
+import com.github.kittinunf.fuel.httpGet
+import com.github.kittinunf.result.Result
+import kotlinx.coroutines.runBlocking
+import org.json.JSONArray
+import org.json.JSONObject
+import org.json.JSONTokener
+import java.util.*
 
 class LearnFragment: Fragment(R.layout.fragment_learn) {
 
@@ -17,7 +30,7 @@ class LearnFragment: Fragment(R.layout.fragment_learn) {
         val dummyArticles: MutableList<MutableList<Article>> = mutableListOf()
 
         for(stringId in sectionTitles) {
-            dummyArticles.add(generateDummyArticles(getString(stringId)))
+            dummyArticles.add(getArticles(getString(stringId).toLowerCase(Locale.ROOT)))
         }
 
         val sectionAdapter = PagerAdapter(dummyArticles, quickTips)
@@ -29,18 +42,26 @@ class LearnFragment: Fragment(R.layout.fragment_learn) {
 
     }
 
-    private fun generateDummyArticles(sectionTitle: String): MutableList<Article> {
-        val result = mutableListOf<Article>()
-
-        for (i in 1..sectionTitle.length) {
-            result.add(Article(id = 0,
-                title = "Article $i in $sectionTitle",
-                link = "https://foodprint.org/blog/6-ways-to-cook-with-less-meat-but-better-meat/",
-                tag = sectionTitle,
-                image = "https://www.calloways.com/wp-content/uploads/grafted-cactus.jpg"))
-
+    private fun getArticles(sectionTag: String): MutableList<Article> {
+        val articles = mutableListOf<Article>()
+        FuelManager.instance.basePath = "https://cactus-backend.herokuapp.com/"
+        runBlocking {
+            val (_, _, result) = Fuel.get("/tags/"+sectionTag).awaitStringResponse()
+            Log.d("result", result)
+            val jsonObject = JSONTokener(result).nextValue() as JSONObject
+            val articleList = jsonObject.getJSONArray("articles")
+            Log.d("article_list", articleList.toString())
+            for (i in 0 until articleList.length()) {
+                val id: Int = articleList.getJSONObject(i).getInt("id")
+                val title: String = articleList.getJSONObject(i).getString("title")
+                val image: String = articleList.getJSONObject(i).getString("image")
+                val link: String = articleList.getJSONObject(i).getString("link")
+                articles.add(Article(id, title, image, link, sectionTag))
+            }
+            Log.d("articles", articles.toString())
         }
-
-        return result
+        return articles
     }
+
 }
+
