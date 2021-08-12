@@ -3,17 +3,116 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_gravity="center"
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="41dp"
-        android:layout_height="20dp"
-        android:text="@string/section1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/question1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:fontFamily="@font/lato"
+        android:gravity="center"
+        android:padding="10sp"
+        android:text="Question 1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/black"
+        android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/option1"
+        android:layout_marginHorizontal="120dp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Very Often"
+        android:layout_gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question1"
+        />
+
+    <Button
+        android:id="@+id/option2"
+        android:layout_marginHorizontal="120dp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Often"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/option1"
+        />
+    <Button
+        android:id="@+id/option3"
+        android:layout_marginHorizontal="120dp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Sometimes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/option2"
+        />
+    <Button
+        android:id="@+id/option4"
+        android:layout_width= "150dp"
+        android:layout_marginHorizontal="120dp"
+        android:layout_height="wrap_content"
+        android:text="Rarely"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/option3"
+        />
+
+    <TextView
+        android:id="@+id/question2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:fontFamily="@font/lato"
+        android:gravity="center"
+        android:padding="10sp"
+        android:text="Question 1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/option4" />
+
+    <Button
+        android:id="@+id/option1.2"
+        android:layout_width="150dp"
+        android:layout_marginHorizontal="120dp"
+        android:layout_height="wrap_content"
+        android:text="Very Often"
+        android:layout_gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question2"
+        />
+
+    <Button
+        android:id="@+id/option2.2"
+        android:layout_width="150dp"
+        android:layout_marginHorizontal="120dp"
+        android:layout_height="wrap_content"
+        android:text="Often"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/option1.2"
+        />
+    <Button
+        android:id="@+id/option3.2"
+        android:layout_width="150dp"
+        android:layout_marginHorizontal="120dp"
+        android:layout_height="wrap_content"
+        android:text="Sometimes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/option2.2"
+        />
+
+    <Button
+        android:id="@+id/option4.2"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="120dp"
+        android:text="Rarely"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/option3.2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

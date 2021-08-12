@@ -26,8 +26,17 @@
 
     <string name="section1">Waste</string>
     <string name="section2">Food</string>
-    <string name="section3">Transport</string>
+    <string name="section3">Transportation</string>
     <string name="section4">Energy</string>
+
+    <string name="qFood1">How often do you consume meat?</string>
+    <string name="qTransportation1">How often do you use a car?</string>
+    <string name="qWaste1">How often do you buy new clothes?</string>
+    <string name="qEnergy1">How often do you turn on the heating/cooling?</string>
+    <string name="qFood2">How often do you eat take-out?</string>
+    <string name="qTransportation2">How often a year do you fly?</string>
+    <string name="qWaste2">How often do you recycle?</string>
+    <string name="qEnergy2">How often do you take hot showers?</string>
 
     <string name="quick_tips">Quick Tips:</string>
     <string name="q_t_waste">replace plastic water bottles with reusable

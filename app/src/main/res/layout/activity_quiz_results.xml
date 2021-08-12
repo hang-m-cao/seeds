@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/quiz_title"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="26dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/lato"
+        android:gravity="center"
+        android:padding="10sp"
+        android:text="Results"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <ImageView
+        android:id="@+id/quiz_results_card"
+        android:layout_width="300dp"
+        android:layout_marginTop="30dp"
+        android:layout_height="300dp"
+        android:layout_marginHorizontal="60dp"
+        app:srcCompat="@drawable/quiz_card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quiz_title" />
+
+    <TextView
+        android:id="@+id/quiz_result_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="150dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/lato"
+        android:gravity="center"
+        android:paddingHorizontal="50sp"
+        android:text="Congratulations! You are a Sapling"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/levelup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/lato"
+        android:gravity="center"
+        android:padding="20sp"
+        android:text="Want to Level Up? Check out Learn for more resources "
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quiz_results_card"/>
+
+    <ImageView
+        android:id="@+id/avatar"
+        android:paddingHorizontal="150dp"
+        android:paddingVertical="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/cactus1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quiz_result_message" />
+    <TextView
+        android:id="@+id/score_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:gravity="center"
+        android:text="Score:  "
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avatar"/>
+
+    <Button
+        android:id="@+id/lrn_button"
+        android:layout_marginHorizontal="130dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go To Learn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/levelup" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

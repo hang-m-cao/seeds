@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TSHLIB"
         android:usesCleartextTraffic="true">
-        <activity android:name=".QuizActivity"></activity>
+        <activity android:name=".QuizResults"></activity>
+        <activity android:name=".QuizActivity" />
         <activity android:name=".QuizStartingActivity" />
         <activity android:name=".ArticleViewActivity" />
         <activity android:name=".MainActivity">
