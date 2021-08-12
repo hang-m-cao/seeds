@@ -14,15 +14,16 @@ class QuizFragment: Fragment(R.layout.fragment_quiz) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val sectionTitles: MutableList<String> =
-            mutableListOf("Waste", "Food", "Energy", "Pollution")
+        val sectionTitles: List<Int> = listOf(R.string.section1, R.string.section2, R.string.section3, R.string.section4)
+        val q1: List<Int> = listOf(R.string.qWaste1,R.string.qFood1,R.string.qEnergy1,R.string.qTransportation1)
+        val q2: List<Int> = listOf(R.string.qWaste2,R.string.qFood2,R.string.qEnergy2,R.string.qTransportation2)
         val dummyQuestions: MutableList<MutableList<Question>> = mutableListOf()
 
         for (i in 1..4) {
             dummyQuestions.add(generateDummyQuestions())
         }
 
-        val sectionAdapter = QuizPagerAdapter(dummyQuestions)
+        val sectionAdapter = QuizPagerAdapter(dummyQuestions,q1,q2)
         quiz_viewpager.adapter = sectionAdapter
 
         TabLayoutMediator(sectionTabs, quiz_viewpager) { tab, position ->

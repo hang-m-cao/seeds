@@ -1,13 +1,20 @@
 package com.example.tshlib
 
+import android.os.Build
+import android.text.SpannableString
+import android.text.SpannableStringBuilder
+import android.text.Spanned
+import android.text.style.BulletSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import kotlinx.android.synthetic.main.fragment_quiz_section.view.*
+import androidx.annotation.RequiresApi
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.fragment_quiz.view.*
 
 class QuizPagerAdapter
-    (private val questions: MutableList<MutableList<Question>>):
+    (private val questions: MutableList<MutableList<Question>>, private val q1: List<Int>, private val q2: List<Int>):
     RecyclerView.Adapter<QuizPagerAdapter.QuizPageHolder>() {
     inner class QuizPageHolder(view: View) : RecyclerView.ViewHolder(view)
 
@@ -20,10 +27,13 @@ class QuizPagerAdapter
     }
 
 
-    override fun onBindViewHolder(holder: QuizPageHolder, position: Int) {
+    override fun onBindViewHolder(holder: QuizPagerHolder, position: Int) {
+
         holder.itemView.apply {
-            textView.text = "Potatoes are great, amazing $position"
+            question1.text = resources.getString(q1[position])
+            question2.text = resources.getString(q2[position])
         }
+
     }
 
     override fun getItemCount(): Int {
