@@ -3,7 +3,9 @@ package com.example.tshlib
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import kotlinx.android.synthetic.main.fragment_dashboard.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         val dashboardFragment : Fragment = DashboardFragment()
         val learnFragment : Fragment = LearnFragment()
         val profileFragment : Fragment = ProfileFragment()
+
 
         var currentFragment: Fragment = dashboardFragment
         var currentFragIconSelected: Int = R.id.nav_dashboard
@@ -41,6 +44,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_dashboard->setCurrentFragment(dashboardFragment)
                 R.id.nav_learn->setCurrentFragment(learnFragment)
                 R.id.nav_profile->setCurrentFragment(profileFragment)
+
             }
             true
         }

@@ -6,19 +6,19 @@ import android.os.Bundle
 import android.widget.Button
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class QuizStartingActivity : AppCompatActivity() {
+class QuizResults : AppCompatActivity() {
     lateinit var currentFragment: String
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_quiz_starting)
+        setContentView(R.layout.activity_quiz_results)
 
-        val startBtn : Button = findViewById(R.id.start_quiz_btn)
-        startBtn.setOnClickListener{
-            val intent = Intent(this, QuizActivity::class.java)
+        val lrnBtn : Button = findViewById(R.id.lrn_button)
+        lrnBtn.setOnClickListener{
+            val intent = Intent(this, LearnFragment::class.java)
             startActivity(intent)
         }
 
+        setContentView(R.layout.activity_quiz_results)
 
         val bottomNav: BottomNavigationView = findViewById(R.id.bottom_navigation)
 
