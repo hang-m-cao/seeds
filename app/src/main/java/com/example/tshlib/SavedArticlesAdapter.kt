@@ -28,7 +28,7 @@ class SavedArticlesAdapter (private val articles : MutableList<Article>):
 
             remove_button.setOnClickListener {
                 articles.remove(currArticle)
-                var db = context?.let { SavedArticlesDB.getInstance(it).articleDAO() }
+                val db = context?.let { SavedArticlesDB.getInstance(it).articleDAO() }
                 if (db != null) {
                     db.deleteArticle(currArticle)
                 }

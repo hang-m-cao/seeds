@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class QuizResults : AppCompatActivity() {
+class QuizResultActivity : AppCompatActivity() {
     lateinit var currentFragment: String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

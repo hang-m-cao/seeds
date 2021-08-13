@@ -12,19 +12,19 @@
         android:layout_marginTop="20dp"
         android:text="@string/quiz"
         android:textColor="@color/black"
-        android:textSize="40sp"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="380dp"
-        android:layout_height="500dp"
+        android:layout_height="530dp"
         app:cardCornerRadius="30dp"
         app:cardBackgroundColor="#c0f2a8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
         app:layout_constraintTop_toTopOf="parent" >
 
         <TextView

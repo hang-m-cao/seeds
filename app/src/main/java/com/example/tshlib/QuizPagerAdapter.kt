@@ -1,19 +1,11 @@
 package com.example.tshlib
 
-import android.os.Build
 import android.content.Intent
-import android.text.SpannableString
-import android.text.SpannableStringBuilder
-import android.text.Spanned
-import android.text.style.BulletSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import androidx.annotation.RequiresApi
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.activity_quiz.view.*
 import kotlinx.android.synthetic.main.fragment_quiz_section.view.*
 
 class QuizPagerAdapter
@@ -56,7 +48,7 @@ class QuizPagerAdapter
 
             val submitBtn : Button = findViewById(R.id.submit)
             submitBtn.setOnClickListener{
-                val intent = Intent(context, QuizResults::class.java)
+                val intent = Intent(context, QuizResultActivity::class.java)
                 context.startActivity(intent)
             }
 
