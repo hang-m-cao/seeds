@@ -114,7 +114,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_nav_menu" />
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="@color/material_on_primary_emphasis_medium"
+        app:itemTextColor="@color/material_on_primary_emphasis_medium"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
