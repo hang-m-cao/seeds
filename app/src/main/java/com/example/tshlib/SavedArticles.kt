@@ -6,5 +6,9 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "saved_articles")
 data class SavedArticles(
     @PrimaryKey
-    var id: Int
+    var id: Int,
+    val title: String,
+    val image: String?,
+    val link: String,
+    val tag: String
 )

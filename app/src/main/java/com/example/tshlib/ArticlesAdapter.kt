@@ -46,13 +46,13 @@ class ArticlesAdapter (private val articles : MutableList<Article>):
             heart_liked.setOnClickListener{
                 heart_liked.visibility = View.INVISIBLE
                 heart_unliked.visibility = View.VISIBLE
-                db.deleteArticle(SavedArticles(id=currArticle.id))
+                db.deleteArticle(currArticle)
             }
 
             heart_unliked.setOnClickListener{
                 heart_liked.visibility = View.VISIBLE
                 heart_unliked.visibility = View.INVISIBLE
-                db.insertArticle(SavedArticles(id=currArticle.id))
+                db.insertArticle(currArticle)
             }
 
             if (!currArticle.image.isNullOrBlank()) {

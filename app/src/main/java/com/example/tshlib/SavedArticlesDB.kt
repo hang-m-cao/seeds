@@ -2,7 +2,7 @@ package com.example.tshlib
 import android.content.Context
 import androidx.room.*
 
-@Database(entities = [SavedArticles::class], version = 1)
+@Database(entities = [Article::class], version = 1)
 abstract class SavedArticlesDB : RoomDatabase() {
     abstract fun articleDAO(): SavedArticlesDAO
 

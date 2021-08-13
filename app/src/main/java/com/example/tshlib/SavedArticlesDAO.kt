@@ -4,12 +4,15 @@ import androidx.room.*
 
 @Dao
 interface SavedArticlesDAO {
-    @Query("SELECT * FROM saved_articles WHERE id == (:id)")
-    fun getArticle(id: Int): List<SavedArticles>
+    @Query("SELECT * FROM articles WHERE id == (:id)")
+    fun getArticle(id: Int): List<Article>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertArticle(article: SavedArticles)
+    fun insertArticle(article: Article)
 
     @Delete
-    fun deleteArticle(article: SavedArticles)
+    fun deleteArticle(article:Article)
+
+    @Query("SELECT * FROM articles")
+    fun getArticles(): List<Article>
 }
