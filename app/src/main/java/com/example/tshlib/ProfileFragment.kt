@@ -5,6 +5,7 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import android.widget.ProgressBar
+import kotlinx.android.synthetic.main.fragment_dashboard.*
 import kotlinx.android.synthetic.main.fragment_profile.*
 
 class ProfileFragment: Fragment(R.layout.fragment_profile) {
@@ -18,6 +19,8 @@ class ProfileFragment: Fragment(R.layout.fragment_profile) {
         dummyArticles.add(Article(0, "Drive Less, Eat More", "", "", "Transport"))
 
         progressBar.incrementProgressBy(Global.score)
+
+
         for (i in 1..5) {
             dummyArticles.add(Article(0, "Article $i", "", "", "Tag $i"))
         }
