@@ -5,7 +5,6 @@ import android.text.SpannableString
 import android.text.SpannableStringBuilder
 import android.text.Spanned
 import android.text.style.BulletSpan
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -35,8 +34,8 @@ class QuizPagerAdapter
 
 
         holder.itemView.apply {
-
-
+            question1.text = resources.getString(q1[position])
+            question2.text = resources.getString(q2[position])
             val opt1 : Button = findViewById(R.id.option1)
             opt1.setOnClickListener{
                 score_priv = score_priv +1
@@ -53,14 +52,13 @@ class QuizPagerAdapter
             opt4.setOnClickListener{
                 score_priv = score_priv +1
             }
-            question1.text = resources.getString(q1[position])
-            question2.text = resources.getString(q2[position])
 
             val submitbtn : Button = findViewById(R.id.submit)
             if (position==3){
-                submitbtn.visibility= View.VISIBLE
+                submit.visibility= View.VISIBLE
                 Global.score=score_priv
             }
+
 
         }
 
