@@ -1,5 +1,4 @@
 package com.example.tshlib
-import androidx.lifecycle.LiveData
 import androidx.room.*
 
 @Dao
