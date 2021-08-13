@@ -31,6 +31,7 @@ class LearnFragment: Fragment(R.layout.fragment_learn) {
 
         for(stringId in sectionTitles) {
             dummyArticles.add(getArticles(getString(stringId).toLowerCase(Locale.ROOT)))
+
         }
 
         val sectionAdapter = PagerAdapter(dummyArticles, quickTips)
