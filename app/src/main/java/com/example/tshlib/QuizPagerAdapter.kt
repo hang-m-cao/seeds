@@ -1,6 +1,7 @@
 package com.example.tshlib
 
 import android.os.Build
+import android.content.Intent
 import android.text.SpannableString
 import android.text.SpannableStringBuilder
 import android.text.Spanned
@@ -53,9 +54,14 @@ class QuizPagerAdapter
                 score_priv = score_priv +1
             }
 
-            val submitbtn : Button = findViewById(R.id.submit)
+            val submitBtn : Button = findViewById(R.id.submit)
+            submitBtn.setOnClickListener{
+                val intent = Intent(context, QuizResults::class.java)
+                context.startActivity(intent)
+            }
+
             if (position==3){
-                submit.visibility= View.VISIBLE
+                submitBtn.visibility= View.VISIBLE
                 Global.score=score_priv
             }
 

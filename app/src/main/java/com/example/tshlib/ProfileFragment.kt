@@ -19,6 +19,7 @@ class ProfileFragment: Fragment(R.layout.fragment_profile) {
         dummyArticles.add(Article(0, "Drive Less, Eat More", "", "", "Transport"))
 
         progressBar.incrementProgressBy(Global.score)
+        print(Global.score)
 
 
         for (i in 1..5) {

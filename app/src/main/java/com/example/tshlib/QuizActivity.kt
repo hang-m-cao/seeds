@@ -34,15 +34,9 @@ class QuizActivity : AppCompatActivity() {
             tab.setText(sectionTitles[position])
         }.attach()
 
-        setContentView(R.layout.fragment_quiz_section)
-        val submitBtn : Button = findViewById(R.id.submit)
-        submitBtn.setOnClickListener{
-            val intent = Intent(this, QuizResults::class.java)
-            startActivity(intent)
-        }
 
 
-        setContentView(R.layout.activity_main)
+
         val bottomNav: BottomNavigationView = findViewById(R.id.bottom_navigation)
         bottomNav.setOnNavigationItemSelectedListener {
             when(it.itemId) {
