@@ -13,20 +13,17 @@ class ProfileFragment: Fragment(R.layout.fragment_profile) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
-        val dummyArticles = mutableListOf<Article>()
-        dummyArticles.add(Article(0, "5 Steps to Sustainable Eating", "", "", "Food"))
-        dummyArticles.add(Article(0, "Drive Less, Eat More", "", "", "Transport"))
-
         progressBar.incrementProgressBy(Global.score)
         print(Global.score)
-
-
-        for (i in 1..5) {
-            dummyArticles.add(Article(0, "Article $i", "", "", "Tag $i"))
+        
+        var db = context?.let { SavedArticlesDB.getInstance(it).articleDAO() }
+        var dummyArticles = mutableListOf<Article>()
+        if (db != null) {
+            dummyArticles = db.getArticles().toMutableList()
         }
 
         my_articles_recyclerview.adapter = SavedArticlesAdapter(dummyArticles)
         my_articles_recyclerview.layoutManager = LinearLayoutManager(context)
+
     }
 }
