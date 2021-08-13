@@ -18,6 +18,7 @@ class QuizResults : AppCompatActivity() {
             startActivity(intent)
         }
 
+        setContentView(R.layout.activity_quiz_results)
 
         val bottomNav: BottomNavigationView = findViewById(R.id.bottom_navigation)
 
