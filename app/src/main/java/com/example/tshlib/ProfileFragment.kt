@@ -21,7 +21,21 @@ class ProfileFragment: Fragment(R.layout.fragment_profile) {
         }
         progressBar.incrementProgressBy(score)
         Log.d("score", score.toString())
-        
+
+        val scoreMod10 = score%10
+        val nextLevelPoints = 10 - scoreMod10
+        points_to.text = "$nextLevelPoints ${getString(R.string.progress_points)}"
+
+        if (score in 11..19) {
+            level_image.setImageResource(R.drawable.cactus2)
+            progressBar.progress = scoreMod10
+        } else if (score > 10) {
+            level_image.setImageResource(R.drawable.cactus)
+            progressBar.progress = scoreMod10
+        }
+
+
+
         val db = context?.let { SavedArticlesDB.getInstance(it).articleDAO() }
         var savedArticles = mutableListOf<Article>()
         if (db != null) {

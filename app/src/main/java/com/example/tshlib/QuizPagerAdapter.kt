@@ -55,8 +55,9 @@ class QuizPagerAdapter
             submitBtn.setOnClickListener{
                 val intent = Intent(context, QuizResultActivity::class.java)
                 val sharedPreferences = context.getSharedPreferences("user_score", Context.MODE_PRIVATE)
+                val score = sharedPreferences.getInt("score",0)
                 val editor = sharedPreferences.edit()
-                editor.putInt("score",scorePriv)
+                editor.putInt("score",score + scorePriv)
                 editor.commit()
                 context.startActivity(intent)
             }

@@ -45,6 +45,8 @@
     <string name="rarely">Rarely</string>
     <string name="submit">Submit</string>
 
+    <string name="progress_points">Points to next level</string>
+
     <string name="quick_tips">Quick Tips:</string>
     <string name="q_t_waste">replace plastic water bottles with reusable
         \ncreate a compost bin for your house/dorm to place food scraps
@@ -63,5 +65,7 @@
         \nswitch to cooler showers</string>
     <string name="level_up_to_learn">Want to Level Up? Check out Learn for more resources</string>
     <string name="go_to_learn">Go To Learn</string>
+    <string name="score">Score:</string>
+    <string name="level_congrats">Congratulations! You are a</string>
 
 </resources>
