@@ -6,6 +6,7 @@
     <string name="your_profile">Your Profile</string>
     <string name="actus">actus</string>
     <string name="done">Done</string>
+    <string name="results">Results</string>
 
     <string name="home_page_question">Been making progress on your carbon footprint reduction journey?</string>
     <string name="take_our_quiz"><![CDATA[Take Our Quiz >]]></string>
@@ -16,13 +17,14 @@
     <string name="quiz">Quiz</string>
     <string name="fossil_fuel_consumption_quiz">Fossil Fuel Consumption Quiz</string>
     <string name="quote"><i>"What gets measured gets managed." - Peter Drucker</i></string>
-    <string name="quiz_carbon_footprint">Ever wondered what your carbon footprint actually is? Our hand-crafted quiz has been explicitly designed for Gen-Z and is based on data from ____ and ____.</string>
+    <string name="quiz_carbon_footprint">Ever wondered what your carbon footprint actually is? Our hand-crafted quiz has been explicitly designed for Gen-Z and is based on data from EPA and Nature Conservancy.</string>
     <string name="start_quiz"><![CDATA[Start Quiz >]]></string>
 
     <string name="featured">Featured</string>
     <string name="saved">Saved</string>
     <string name="all">All</string>
     <string name="my_articles">My Articles</string>
+    <string name="saved_articles">Saved Articles</string>
 
     <string name="section1">Waste</string>
     <string name="section2">Food</string>
@@ -37,6 +39,14 @@
     <string name="qTransportation2">How often a year do you fly?</string>
     <string name="qWaste2">How often do you recycle?</string>
     <string name="qEnergy2">How often do you take hot showers?</string>
+
+    <string name="very_often">Very Often</string>
+    <string name="often">Often</string>
+    <string name="sometimes">Sometimes</string>
+    <string name="rarely">Rarely</string>
+    <string name="submit">Submit</string>
+
+    <string name="progress_points">Points to next level</string>
 
     <string name="quick_tips">Quick Tips:</string>
     <string name="q_t_waste">replace plastic water bottles with reusable
@@ -54,5 +64,15 @@
     <string name="q_t_energy">replace old light-bulbs with energy-efficient alternatives
         \nencourage turning lights and appliances off when not in use
         \nswitch to cooler showers</string>
+    <string name="level_up_to_learn">Want to Level Up? Check out Learn for more resources</string>
+    <string name="go_to_learn">Go To Learn</string>
+    <string name="score">Score:</string>
+    <string name="level_congrats">Congratulations! You are a</string>
+    <string name="your_stats">Your Stats</string>
+    <string name="your_level">Your Level:</string>
+
+    <string name="sapling">Sapling (Beginner)</string>
+    <string name="mother_tree">Mother Tree (Intermediate)</string>
+    <string name="god">God (Advanced)</string>
 
 </resources>
