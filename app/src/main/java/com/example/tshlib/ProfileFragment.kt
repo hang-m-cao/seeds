@@ -25,17 +25,19 @@ class ProfileFragment: Fragment(R.layout.fragment_profile) {
         val scoreMod10 = score%10
         val nextLevelPoints = 10 - scoreMod10
         points_to.text = "$nextLevelPoints ${getString(R.string.progress_points)}"
+        var levelText = getString(R.string.sapling)
 
-        if (score in 11..19) {
+        if (score in 10..19) {
             level_image.setImageResource(R.drawable.cactus2)
             progressBar.progress = scoreMod10
+            levelText = getString(R.string.mother_tree)
         } else if (score > 10) {
             level_image.setImageResource(R.drawable.cactus)
             progressBar.progress = scoreMod10
+            levelText = getString(R.string.god)
         }
 
-
-
+        level.text = "${getString(R.string.your_level)} $levelText"
         val db = context?.let { SavedArticlesDB.getInstance(it).articleDAO() }
         var savedArticles = mutableListOf<Article>()
         if (db != null) {

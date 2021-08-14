@@ -24,6 +24,7 @@
     <string name="saved">Saved</string>
     <string name="all">All</string>
     <string name="my_articles">My Articles</string>
+    <string name="saved_articles">Saved Articles</string>
 
     <string name="section1">Waste</string>
     <string name="section2">Food</string>
@@ -67,5 +68,11 @@
     <string name="go_to_learn">Go To Learn</string>
     <string name="score">Score:</string>
     <string name="level_congrats">Congratulations! You are a</string>
+    <string name="your_stats">Your Stats</string>
+    <string name="your_level">Your Level:</string>
+
+    <string name="sapling">Sapling (Beginner)</string>
+    <string name="mother_tree">Mother Tree (Intermediate)</string>
+    <string name="god">God (Advanced)</string>
 
 </resources>

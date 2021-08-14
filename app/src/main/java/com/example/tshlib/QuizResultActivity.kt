@@ -24,16 +24,17 @@ class QuizResultActivity : AppCompatActivity() {
         val sharedPreferences = getSharedPreferences("user_score", Context.MODE_PRIVATE)
         val score = sharedPreferences.getInt("score",0)
         score_result.text = "${getString(R.string.score)} $score"
+        var levelText = getString(R.string.sapling)
 
-        if (score < 10) {
-            quiz_result_message.text = "${getString(R.string.level_congrats)} Sapling"
-        } else if (score < 20) {
+        if (score in 10..19) {
             avatar.setImageResource(R.drawable.cactus2)
-            quiz_result_message.text = "${getString(R.string.level_congrats)} Mother Tree"
-        } else {
+            levelText = getString(R.string.mother_tree)
+        } else if (score > 10) {
             avatar.setImageResource(R.drawable.cactus)
-            quiz_result_message.text = "${getString(R.string.level_congrats)} God"
+            levelText = getString(R.string.god)
         }
+
+        quiz_result_message.text = "${getString(R.string.level_congrats)} $levelText"
 
         val bottomNav: BottomNavigationView = findViewById(R.id.bottom_navigation)
 
